@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+body{
+    font-size: 0.9rem;
+}
+.container{
+    margin-top: 1.5rem;
+
+}
+
+/* ASIDE */
+.aside{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.aside-header{
+    text-transform: capitalize;
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+.aside-header img{
+    max-width: 150px;
+    border-radius: 100%;
+    margin: 1rem;
+}
+
+.names span:first-child{
+    color: #7498b5;
+    font-weight: bold;
+}
+
+.aside-body{
+    margin-bottom: auto;
+}
+.aside li{
+    font-size: 0.89rem;
+}
+
+.aside ul, .section ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.cv .aside-body>ul>li:first-child,
+.cv .section-body>ul>li:first-child{
+    color: #7498b5;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.cv .aside ul{
+    text-align: end;
+}
+
+.motiv .contact li{
+    background: #2B3035;
+    text-align: start;
+}
+
+.contact .bi{
+    color: #7498b5;
+}
+
+.skills>li{
+    font-weight: bold;
+    color: rgb(157, 151, 151);
+    margin-bottom: 1rem;
+}
+.skills>li>ul>li{
+    font-weight: lighter;
+    color: white;
+}
+
+.social{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.social li{
+    background-color: #2B3035;
+    color: #7498b5;
+}
+
+/* SECTION */
+.section{
+    color: #2B3035;
+}
+
+.link{
+    text-align: end;
+    padding: 0.5rem 0;
+    text-transform: capitalize;
+}
+
+.section .info h1,
+.section .info h6{
+    text-transform: capitalize;
+    font-family: 'Arial', sans-serif;
+}
+.list i{
+    font-size: 0.6rem;
+}
+
+.aside-footer{
+    padding-bottom: 1rem;
+}
+
+/* @media (min-width: 576px) { }
+
+@media (min-width: 768px) { }
+
+@media (min-width: 992px) { }
+
+@media (min-width: 1200px) { }
+
+@media (min-width: 1400px) { } */
