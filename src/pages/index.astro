@@ -1,14 +1,17 @@
 ---
 import User from '../components/User.astro';
+import Social from '../components/Social.astro';
 import Layout from "../layouts/Layout.astro";
 const title= 'Lettre de Motivation';
 ---
 
 <Layout title={title}>
-	<div class="row lettre bg-body-tertiary">
+	<div class="row lm bg-body-tertiary">
 		<!-- Link -->
 		<div class="link d-md-none">
-			<a href="/yastacode.github.io/cv/" class="active" title="Aller au CV"><i class="btn btn-light bi bi-file-person"></i></a>
+			<a href="/yastacode.github.io/cv/" class="active" title="Aller au CV">
+				<i class="btn btn-light bi bi-file-person"></i>
+			</a>
 		</div> 
 
 		<!-- Aside -->
@@ -17,7 +20,9 @@ const title= 'Lettre de Motivation';
 				<User />
 			</div>
 			<div class="aside-body">aside-body</div>
-			<div class="aside-footer">aside-footer</div>
+			<div class="aside-footer">
+				<Social />
+			</div>
 		</aside>
 
 		<!-- Section -->
@@ -41,6 +46,12 @@ const title= 'Lettre de Motivation';
 		text-align: center;
 		border-bottom: 1px dotted #7498b5;
 		padding-bottom: 1rem;
+	}
+
+	/* aside-footer */
+	.aside-footer{
+		border-top: 1px dotted #7498b5;
+		padding: 0.5rem;
 	}
 
 </style>
