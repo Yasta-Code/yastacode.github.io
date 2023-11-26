@@ -1,0 +1,40 @@
+---
+const user= {
+    picture: '/yastacode.github.io/moi.jpeg',
+    first: 'jesús',
+    last: 'córdova',
+    carrier: 'front-end'
+}
+---
+<!-- User -->
+<div class="user">
+    <img src={user.picture} alt="User Picture">
+
+    <!-- Names -->
+	<div class="names">
+		<h2><span>{user.last}</span> <span>{user.first}</span></h2>
+		<p>{user.carrier}</p>
+	</div>
+</div>
+<style>
+    /* User */
+    .user{
+        text-transform: capitalize;
+        font-family: 'Julius Sans One', sans-serif;
+    }
+    .user img{
+        max-width: 120px;
+        border-radius: 100%;
+        margin: 1rem;
+        border: 4px double #fff;
+        box-shadow: 1px 1px 2px #000;
+    }
+    span:first-child{
+        color: #7498b5;
+    }
+
+    /* Names */
+    .names p{
+        margin-bottom: 0;
+    }
+</style>
