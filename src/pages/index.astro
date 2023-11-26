@@ -1,6 +1,7 @@
 ---
 import User from '../components/User.astro';
 import Social from '../components/Social.astro';
+import Contact from '../components/Contact.astro';
 import Layout from "../layouts/Layout.astro";
 const title= 'Lettre de Motivation';
 ---
@@ -19,7 +20,9 @@ const title= 'Lettre de Motivation';
 			<div class="aside-header">
 				<User />
 			</div>
-			<div class="aside-body">aside-body</div>
+			<div class="aside-body">
+				<Contact />
+			</div>
 			<div class="aside-footer">
 				<Social />
 			</div>
@@ -48,10 +51,14 @@ const title= 'Lettre de Motivation';
 		padding-bottom: 1rem;
 	}
 
+	/* aside-body */
+	.aside-body{
+		margin-bottom: auto;
+	}
+
 	/* aside-footer */
 	.aside-footer{
 		border-top: 1px dotted #7498b5;
 		padding: 0.5rem;
 	}
-
 </style>
