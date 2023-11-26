@@ -4,6 +4,24 @@ import Social from '../components/Social.astro';
 import Contact from '../components/Contact.astro';
 import Layout from "../layouts/Layout.astro";
 const title= 'Lettre de Motivation';
+const company= 
+	{name: 'tesla duo group', 
+	rue: 'Rue de la Laiterie 34, 1060 Saint-Gilles'
+}
+const info= [
+	{title: 'Objet', text: "Candidature spontanée pour le  poste d'inspecteur de qualité."},
+	{title: 'Offre', text: "#247273 - Actiris."},
+	{title: 'Date', text: "25/11/2023"}
+]
+
+const motivation= [
+	"Je me permets de vous adresser ma candidature pour le poste d'inspecteur de qualité au sein de votre entreprise, en réponse à un intérêt profond pour votre organisation et la conviction que mes compétences en informatique peuvent être mises au service de l'amélioration de la qualité de vos produits.",
+	"Bien que je n'aie pas d'expérience formelle en tant qu'inspecteur de qualité, je possède une solide expérience dans le domaine de l'informatique, avec une expertise particulière dans la compréhension et structures des codes, la manipulation de tous types d'ordinateurs, la recherche d'une solution à toute situation qui se présente instantanément. Mon expérience dans ce domaine m'a permis de développer des compétences essentielles telles que la rigueur, l'analyse critique et le souci du détail, toutes des qualités essentielles pour un inspecteur de qualité.",
+	"En dépit de mon absence d'expérience directe dans le domaine de l'inspection de la qualité, je suis convaincu que mes compétences en informatique peuvent être transférables et complémentaires à ce rôle. Ma capacité à identifier rapidement les anomalies, à résoudre des problèmes de manière méthodique et à travailler de manière autonome pourrait être un atout précieux pour votre équipe d'inspection de qualité.",
+	"Je suis particulièrement attiré par votre offre et je suis convaincu que rejoindre votre équipe me permettrait de contribuer significativement à l'amélioration continue de la qualité de vos produits.",
+	"Je me tiens à votre disposition pour discuter de ma candidature de manière plus approfondie lors d'un entretien. Je suis disponible par téléphone au +32 479 069 836 ou par email à jescordova@hotmail.com",
+	"Je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.",
+]
 ---
 
 <Layout title={title}>
@@ -29,13 +47,46 @@ const title= 'Lettre de Motivation';
 		</aside>
 
 		<!-- Section -->
-		<section class="section col-12 col-md-8">section</section>
+		<section class="section bg-body-tertiary col-12 col-md-8" data-bs-theme="light">
+			<div class="section-header">
+				<div class="company">
+					<h2>{company.name}</h2>
+					<p>{company.rue}</p>
+					<ul class="list-unstyled mt-3">
+						{info.map((item) => 
+							<li><b>{item.title}</b> : {item.text}</li>
+						)}
+					</ul>
+				</div>
+				
+				<!-- Link -->
+				<div class="link">
+					<a href="/yastacode.github.io/cv/" class="active" title="Curriculum Vitae">
+						<i class="btn btn-secondary bi bi-file-person"></i>
+					</a>
+				</div> 
+
+			</div>
+			<div class="section-body">
+				<!-- Motivation -->
+				<div class="motivation">
+					<p>Madame, Monsieur,</p>
+					{motivation.map((paragraph) => 
+						<p>{paragraph}</p>
+					)}
+				</div>
+			</div>
+			<div class="section-footer">
+				<p>Cordialment,</p>
+				<p class="text-capitalize">Jesús Córdova lizano</p>				
+			</div>
+		</section>
 	</div>
 </Layout>
 
 <style>
 	/* link */
-	.link{
+	.lm>.link{
         text-align: end;
 		padding: 1rem 1rem 0 0;
     }
@@ -60,5 +111,23 @@ const title= 'Lettre de Motivation';
 	.aside-footer{
 		border-top: 1px dotted #7498b5;
 		padding: 0.5rem;
+	}
+
+	/* section-header */
+	.section{
+		color: #2B3035;
+	}
+	.section-header{
+		display: flex;
+		justify-content: space-between;
+		padding: 0.5rem 0;
+	}
+	.company h2,
+	.company p{
+		margin: 0;
+		text-transform: uppercase;
+	}
+	.company p{
+		text-transform: inherit;
 	}
 </style>
