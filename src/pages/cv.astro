@@ -1,169 +1,27 @@
 ---
 import Layout from "../layouts/Layout.astro";
 const title= 'Curriculum Vitae';
-
-const user= {
-    picture: '/yastacode.github.io/moi.jpeg',
-    first: 'jesús',
-    last: 'córdova',
-    carrier: 'front-end'
-}
-
-const contact= [
-	{icon: 'bi bi-envelope-fill', text: 'jescordova@hotmail.com'},
-	{icon: 'bi bi-geo-alt-fill', text: '1070 Bruxelles, BE'},
-	{icon: 'bi bi-phone-fill', text:'+32 479 069 836'},
-	{icon: 'bi bi-linkedin', text:'linkedin.com/in/jo-batch'},
-	{icon: 'bi bi-globe', text:'www.yastacode.com '}
-]
-
-const education= [
-    'ingenieria en sistemas',
-    'Computer Science',
-    'Université Central',
-    '2004 - 2008',
-    'Ambato-Equateur'
-]
-
-const skills= [
-    {title: 'Languages', lang:['HTML','CSS','JavaScript','Astro']},
-    {title: 'Libraries', lang: ['React','jQuery','Redux']},
-    {title: 'Frameworks', lang: ['Angular','Node.js']},
-    {title: 'Testin', lang: ['testin']}
-]
-
-const career= {
-    title: 'career objective',
-    contenu: '"Aspirant à occuper le poste d\'inspecteur de qualité, je capitalise sur mes compétences approfondies en informatique, notamment dans [mentionnez des compétences spécifiques telles que l\'analyse de données, la résolution de problèmes informatiques, etc.]. Fort(e) d\'une expérience significative dans la rigueur et la précision inhérentes à la gestion informatique, je suis prêt(e) à appliquer ces qualités à l\'inspection de la qualité. Ma capacité à identifier rapidement les anomalies et à garantir la conformité aux normes élevées s\'aligne parfaitement avec l\'objectif d\'amélioration continue de votre entreprise. Mon engagement envers l\'excellence opérationnelle, combiné à ma passion pour [mentionnez tout élément spécifique du domaine de la qualité que vous trouvez motivant], me positionne comme un candidat idéal pour contribuer au succès de votre équipe d\'inspection de qualité."'
-}
-
-const experience= {
-    title: 'work experience',
-    content: [
-        {
-            subtitle: 'front-end developer',
-            lieu: 'ambato',
-            date: '12/01/2023',
-            labels: ['text 1', 'text 2']
-        },
-        {
-            subtitle: 'front-end',
-            lieu: 'ambato',
-            date: '12/01/2023',
-            labels: ['text 1', 'text 2']
-        },
-
-    ]
-}
-
-const social= [
-	'bi bi-github',
-	'bi bi-twitch',
-	'bi bi-youtube',
-	'bi bi-linkedin',
-	'bi bi-instagram'
-]
 ---
-
 <Layout title={title}>
-	<div class="row cv bg-body-tertiary">
-
-		<!-- Aside -->
-		<aside class="aside col-12 col-md-4">
-            <!-- Link -->
-            <div class="link d-md-none">
-                <a href="/yastacode.github.io/" class="active">lettre de motivation</a>
-            </div> 
-			<div class="aside-header">
-				<img src={user.picture} alt="User Picture">
-
-				<!-- User -->
-				<div class="names">
-					<h2 class=""><span>{user.last}</span> <span>{user.first}</span></h2>
-					<p class="">{user.carrier}</p>
-				</div>
-			</div>
-			<hr>
-			<div class="aside-body">
-
-				<!-- Contact -->
-				<ul class="contact">
-                    <li class="lead">contact</li>
-					{contact.map((item) =>
-						<li>{item.text} <i class={item.icon}></i></li>
-					)}	
-				</ul>
-
-                <!-- Education -->
-                <ul class="education">
-                    <li class="lead">education</li>
-                    {education.map((item) => 
-                    <li>{item}</li>
-                    )}
-                </ul>
-
-                <!-- Slkills -->
-                <ul class="skills">
-                    <li class="lead fw-light">skills</li>
-                    {skills.map((skill) => 
-                        <li>{skill.title}
-                            <ul>
-                                {skill.lang.map((item) =>
-                                    <li class="fw-normal">{item}</li>
-                                )}
-                            </ul>
-                        </li>
-                    )}
-                </ul>
-                <hr>
-                <div class="aside-footer">
-    
-                    <!-- Social -->
-                    <ul class="social">
-                        {social.map((icon) => 
-                            <li><i class={icon}></i></li>			
-                        )}
-                    </ul>
-                </div>
-
-			</div>
-		</aside>
-
-		<!-- Section -->
-		<section class="section col-12 col-md-8 bg-body-tertiary" data-bs-theme="light">
-			<div class="section-header">
-
-				<!-- Link -->
-				<div class="link">
-					<a href="/yastacode.github.io/" class="active">lettre de motivation</a>
-				</div>  
-			</div>
-			<div class="section-body">
-                
-                <!-- Career -->
-                <ul class="career">
-                    <li class="lead  fw-bold">{career.title}</li>
-                    <li>{career.contenu}</li>
-                </ul>
-
-				<!-- Experience -->
-				<ul class="experience">
-                    <li class="lead fw-bold">{experience.title}</li>
-                    {experience.content.map((item) => 
-                        <li class="text-capitalize fw-bold">{item.subtitle}</li>
-                        <li class="text-capitalize" style="color:#247273">{item.lieu}</li>
-                        <li class="text-capitalize" style="color: rgb(157, 151, 151);">{item.date}</li>
-                        <li class="text-capitalize mb-3">
-                            <ul>
-                                {item.labels.map((label) =>
-                                    <li class="list"> <i class="bi bi-caret-right-fill"></i>{label}</li>
-                                )}
-                            </ul>
-                        </li>
-                    )}
-                </ul>
-			</div>	
-		</section>
-	</div>
-</Layout> 
-<style></style>
+    <div class="row lm bg-body-tertiary">
+        <!-- Link -->
+        <div class="link d-md-none">
+			<a href="/yastacode.github.io/" class="active" title="Lettre de Motivation">
+				<i class="btn btn-light bi bi-file-earmark-text"></i>
+			</a>
+		</div> 
+        <!-- Aside -->
+        <!-- Section -->
+    </div>
+</Layout>
+<style>
+    /* link */
+	.link{
+        text-align: end;
+		padding: 1rem 1rem 0 0;
+    }
+	.link .bi{
+		font-size: 1.3rem;
+		padding: 0 0.4rem 0 0.4rem;
+	}
+</style>
