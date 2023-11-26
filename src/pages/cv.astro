@@ -1,6 +1,7 @@
 ---
 import User from '../components/User.astro';
 import Layout from "../layouts/Layout.astro";
+import ContactEnd from '../components/Contactend.astro';
 
 const title= 'Curriculum Vitae';
 ---
@@ -19,6 +20,9 @@ const title= 'Curriculum Vitae';
             <div class="aside-header">
 				<User />
 			</div>
+            <div class="aside-body">
+				<ContactEnd />
+			</div>
         </aside>
 
         <!-- Section -->
@@ -35,11 +39,18 @@ const title= 'Curriculum Vitae';
 		font-size: 1.3rem;
 		padding: 0 0.4rem 0 0.4rem;
 	}
-    
+
     /* aside-header */
 	.aside-header{
 		text-align: center;
 		border-bottom: 1px dotted #7498b5;
 		padding-bottom: 1rem;
 	}
+    /* aside-body */
+	.aside-body{
+		margin-bottom: auto;
+        text-align: end;
+	}
+    
+    
 </style>
