@@ -4,10 +4,10 @@ import Social from '../components/Social.astro';
 import Contact from '../components/Contact.astro';
 import Layout from "../layouts/Layout.astro";
 const title= 'Lettre de Motivation';
-const company= 
-	{name: 'tesla duo group', 
-	rue: 'Rue de la Laiterie 34, 1060 Saint-Gilles'
-}
+// const company= 
+// 	{name: 'tesla duo group', 
+// 	rue: 'Rue de la Laiterie 34, 1060 Saint-Gilles'
+// }
 const info= [
 	{title: 'Objet', text: "Candidature spontanée pour le  poste d'inspecteur de qualité."},
 	{title: 'Offre', text: "#247273 - Actiris."},
@@ -50,8 +50,8 @@ const motivation= [
 		<section class="section bg-body-tertiary col-12 col-md-8" data-bs-theme="light">
 			<div class="section-header">
 				<div class="company">
-					<h2>{company.name}</h2>
-					<p>{company.rue}</p>
+					<!-- <h2>{company.name}</h2>
+					<p>{company.rue}</p> -->
 					<ul class="list-unstyled mt-3">
 						{info.map((item) => 
 							<li><b>{item.title}</b> : {item.text}</li>
