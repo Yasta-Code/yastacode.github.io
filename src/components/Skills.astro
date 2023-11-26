@@ -26,6 +26,7 @@ const skills= [
     ul{
         list-style: none;
         padding: 0;
+        text-align: end;
     }
     .skills>li:first-child{
         margin-top: 1rem;
@@ -40,5 +41,10 @@ const skills= [
     }
     .subtitle>ul li:last-child{
         margin-bottom: 1rem;
+    }
+    @media (max-width: 768px) {
+        ul{
+            text-align: center;
+        }
     }
 </style>
