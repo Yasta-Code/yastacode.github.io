@@ -3,9 +3,67 @@ import User from '../components/User.astro';
 import ContactEnd from '../components/ContactEnd.astro';
 import Education from '../components/Education.astro';
 import Skills from '../components/Skills.astro';
+import Social from '../components/Social.astro';
 import Layout from "../layouts/Layout.astro";
 
 const title= 'Curriculum Vitae';
+
+const profil= {
+    title: 'profil',
+    description: [
+        'Aspirant à occuper le poste d\'inspecteur de qualité, je capitalise sur mes compétences approfondies en informatique, telles que l\'analyse de données, la résolution de problèmes.',
+        ' Fort d\'une expérience significative dans la rigueur et la précision inhérentes à la gestion informatique, je suis prêt à appliquer ces qualités à l\'inspection de la qualité. Ma capacité à identifier rapidement les anomalies et à garantir la conformité aux normes élevées s\'aligne parfaitement avec l\'objectif d\'amélioration continue de votre entreprise. Mon engagement envers l\'excellence opérationnelle, me positionne comme un candidat idéal pour contribuer au succès de votre équipe d\'inspection de qualité.'
+    ]
+}
+
+const experience= {
+    title: 'expérience professionnelles',
+    content: [
+        {
+            subtitle: 'Formateur indépendant (freelance)',
+            lieu:[
+                {local: 'Vatra Asbl'},
+                {town:'Bruxelles 1060'},
+                {date: '2022 - 2023 - 2h x semaine'},
+            ],
+            labels: [
+                'Introduction au langage HTML et CSS pour débutants', 
+                'Langage HTML et CSS niveau Junior',
+                'Introduction à la librerie Bootstrap niveau débutants',
+            ]
+        },
+        {
+            subtitle: 'front-end développeur',
+            lieu:[
+                {local: 'Eucclides'},
+                {town:'Bruxelles 1120'},
+                {date: '2021 - 2022'},
+            ],
+            labels: [
+                'Réalisation des app web avec (HTML, CSS, Js) et MongoDB.',
+                'Integration et codage des modules et libraries web.',
+                'Créations des illustrations et graphisme pour des app web'
+            ]
+        },
+        {
+            subtitle: 'formation développeur web',
+            lieu: [
+                {local: 'Evoliris'},
+                {town:'Bruxelles 1080'},
+                {date: '2019 - 2020'},
+            ],
+            labels: [
+                'Réalisation d\'un e-comerce en HTML, CSS, Js avec WordPress.',
+                'Formation, modules Admin, CMS Drupal, (HTML5, CSS3, Js)',
+                'Progrmmation client JavaScript (class, objets)'
+            ]
+        },
+
+    ]
+}
+
+const speak= ['Francais','Esagnole','Englais :'];
+const loisir= ['musique','voyage','guitare','charango','tutorials web'];
 ---
 
 <Layout title={title}>
@@ -30,12 +88,69 @@ const title= 'Curriculum Vitae';
         </aside>
 
         <!-- Section -->
+        <section class="section bg-body-tertiary col-12 col-md-8" data-bs-theme="light">
+            <div class="section-header">
+                <div class="title lead">{profil.title}</div>
+
+                <!-- Link -->
+				<div class="link">
+					<a href="/yastacode.github.io/" class="active" title="Lettre de Motivation">
+						<i class="btn btn-secondary bi bi-file-earmark-text"></i>
+					</a>
+				</div> 
+            </div>
+            <div class="section-body">
+                <div class="profil">
+                    {profil.description.map((item) =>
+                        <p>{item}</p>
+                    )}
+                </div>
+                <hr>
+                <ul class="experiences list-unstyled">
+                    <li class="lead">{experience.title}</li>
+                    {experience.content.map((item) => 
+                        <li class="subtitle">{item.subtitle}</li>
+                        <li class="d-flex justify-content-between">
+                            {item.lieu.map((i) => 
+                                <span>{i.local}</span><span>{i.town}</span><span>{i.date}</span>
+                            )}
+                        </li>
+                        <li>
+                            <ul>
+                                {item.labels.map((i) => 
+                                    <li><i>{i}</i></li>
+                                )}
+                            </ul>
+                        </li>
+                    )}
+
+                </ul>
+                <hr>
+                <div class="speak mb-3">
+                    <div class="title lead">langages: </div>
+                    {speak.map((item) => 
+                        <span class="d-flex">{item}</span>
+                    )}
+                </div>
+                <hr>
+                <div class="loisir">
+                    <div class="title lead">loisir: </div>
+                    {loisir.map((item) => 
+                        <span class="d-flex  text-capitalize">{item}</span>
+                    )}
+                </div>
+            </div>
+            <div class="section-footer">
+                <Social />
+            </div>
+            <!-- Profil -->
+        </section>
     </div>
 </Layout>
 
 <style>
     /* link */
-	.link{
+	.cv>.link{
         text-align: end;
 		padding: 1rem 1rem 0 0;
     }
@@ -53,6 +168,44 @@ const title= 'Curriculum Vitae';
     /* aside-body */
 	.aside-body{
 		margin-bottom: auto;
-        text-align: end;
+	}
+    /* section-header */
+    .section{
+		color: #2B3035;
+        display: flex;
+        flex-direction: column;
+	}
+    .section-header{
+		display: flex;
+		justify-content: space-between;
+		padding: 0.5rem 0;
+        padding-bottom: 0;
+	}
+    .title{
+        text-transform: uppercase;
+        color: #7498b5;
+    }
+    .section-body{
+        margin-bottom: auto;
+    }
+    .experiences>li:first-child{
+        text-transform: uppercase;
+        color: #7498b5;
+    }
+    .experiences .subtitle{
+        color: #7498b5;
+        font-weight: bold;
+        text-transform: capitalize;
+    }
+    .experiences ul>li:last-child{
+        margin-bottom: 1rem;
+    }
+    .lieu{
+        display: flex;
+    }
+    /* aside-footer */
+	.section-footer{
+		border-top: 1px dotted #7498b5;
+		padding: 0.5rem;
 	}
 </style>
