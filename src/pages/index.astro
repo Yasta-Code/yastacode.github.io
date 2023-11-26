@@ -1,121 +1,35 @@
 ---
 import Layout from "../layouts/Layout.astro";
 const title= 'Lettre de Motivation';
-
-const user= {
-    picture: '/yastacode.github.io/moi.jpeg',
-    first: 'jesús',
-    last: 'córdova',
-    carrier: 'front-end'
-}
-
-const contact= [
-	{icon: 'bi bi-envelope-fill', text: 'jescordova@hotmail.com'},
-	{icon: 'bi bi-geo-alt-fill', text: '1070 Bruxelles, BE'},
-	{icon: 'bi bi-phone-fill', text:'+32 479 069 836'},
-	{icon: 'bi bi-linkedin', text:'linkedin.com/in/jo-batch'},
-	{icon: 'bi bi-globe', text:'www.yastacode.com '},
-]
-
-const social= [
-	'bi bi-github',
-	'bi bi-twitch',
-	'bi bi-youtube',
-	'bi bi-linkedin',
-	'bi bi-instagram'
-]
-
-const info= [
-	{title: 'Objet', text: "Candidature spontanée pour le  poste d'inspecteur de qualité."},
-	{title: 'Offre', text: "#247273 - Actiris."},
-	{title: 'Date', text: "25/11/2023"}
-]
-
-const motivation= [
-	"Je me permets de vous adresser ma candidature pour le poste d'inspecteur de qualité au sein de votre entreprise, en réponse à un intérêt profond pour votre organisation et la conviction que mes compétences en informatique peuvent être mises au service de l'amélioration de la qualité de vos produits.",
-	"Bien que je n'aie pas d'expérience formelle en tant qu'inspecteur de qualité, je possède une solide expérience dans le domaine de l'informatique, avec une expertise particulière dans [mentionnez ici quelques compétences spécifiques en informatique que vous possédez]. Mon expérience dans ce domaine m'a permis de développer des compétences essentielles telles que la rigueur, l'analyse critique et le souci du détail, toutes des qualités essentielles pour un inspecteur de qualité.",
-	"En dépit de mon absence d'expérience directe dans le domaine de l'inspection de la qualité, je suis convaincu(e) que mes compétences en informatique peuvent être transférables et complémentaires à ce rôle. Ma capacité à identifier rapidement les anomalies, à résoudre des problèmes de manière méthodique et à travailler de manière autonome pourrait être un atout précieux pour votre équipe d'inspection de qualité.",
-	"Je suis particulièrement attiré(e) par votre entreprise en raison de [mentionnez ici une ou deux raisons spécifiques pour lesquelles vous êtes intéressé(e) par cette entreprise]. Je suis convaincu(e) que rejoindre votre équipe me permettrait de contribuer significativement à l'amélioration continue de la qualité de vos produits.",
-	"Je me tiens à votre disposition pour discuter de ma candidature de manière plus approfondie lors d'un entretien. Je suis disponible par téléphone au [votre numéro de téléphone] ou par email à [votre adresse email].",
-	"Je vous prie d'agréer, Madame, Monsieur, l'expression de mes salutations distinguées.",
-]
-
 ---
 
 <Layout title={title}>
-	<div class="row motiv bg-body-tertiary">
+	<div class="row lettre bg-body-tertiary">
+		<!-- Link -->
+		<div class="link d-md-none">
+			<a href="/yastacode.github.io/cv/" class="active" title="Aller au CV"><i class="btn btn-light bi bi-file-person"></i></a>
+		</div> 
 
 		<!-- Aside -->
 		<aside class="aside col-12 col-md-4">
-			<!-- Link -->
-			<div class="link d-md-none">
-				<a href="/yastacode.github.io/cv/" class="active">curriculum vitae</a>
-			</div> 
-			<div class="aside-header">
-				<img src={user.picture} alt="User Picture">
-
-				<!-- User -->
-				<div class="names">
-					<h2 class=""><span>{user.last}</span> <span>{user.first}</span></h2>
-					<p class="">{user.carrier}</p>
-				</div>
-			</div>
-			<hr>
-			<div class="aside-body">
-
-				<!-- Contact -->
-				<ul class="contact list-group list-group-flush ">
-					{contact.map((item) =>
-						<li class="list-group-item"><i class={item.icon}></i> {item.text}</li>
-					)}
-					
-				</ul>
-			</div>
-			<hr>
-			<div class="aside-footer">
-
-				<!-- Social -->
-				<ul class="social list-unstyled">
-					{social.map((icon) => 
-						<li><i class={icon}></i></li>			
-					)}
-				</ul>
-			</div>
+			<div class="aside-header">aside-header</div>
+			<div class="aside-body">aside-body</div>
+			<div class="aside-footer">aside-footer</div>
 		</aside>
 
 		<!-- Section -->
-		<section class="section col-12 col-md-8 bg-body-tertiary" data-bs-theme="light">
-			<div class="section-header">
-
-				<!-- Link -->
-				<div class="link">
-					<a href="/yastacode.github.io/cv/" class="active">curriculum vitae</a>
-				</div>
-
-				<!-- Info -->
-				<div class="info">
-					<!-- <h1 class="mb-0 text-capitalize">tesla duo group</h1>
-					<h6 class="mt-0fw-light mb-3">Rue de la Laiterie 34, 1060 Saint-Gilles</h6> -->
-					<ul class="list-unstyled">
-						{info.map((item) => 
-							<li><b>{item.title}</b> : {item.text}</li>
-						)}
-					</ul>
-				</div>
-			</div>
-			<div class="section-body">
-
-				<!-- Motivation -->
-				<div class="motivation">
-					<p>Madame, Monsieur,</p>
-					{motivation.map((paragraph) => 
-						<p>{paragraph}</p>
-					)}
-					<p>Cordialment,</p>
-					<p>Jesús Córdova Lizano</p>
-				</div>
-			</div>	
-		</section>
-	</div>
+		<section class="section col-12 col-md-8">section</section>
+		</div>
 </Layout>
-<style></style>
+
+<style>
+	/* link */
+	.link{
+        text-align: end;
+		padding: 1rem 1rem 0 0;
+    }
+	.link .bi{
+		font-size: 1.3rem;
+		padding: 0 0.4rem 0 0.4rem;
+	}
+</style>
