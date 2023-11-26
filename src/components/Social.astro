@@ -1,0 +1,23 @@
+---
+const social= [
+	'bi bi-github',
+	'bi bi-twitch',
+	'bi bi-youtube',
+	'bi bi-linkedin',
+	'bi bi-instagram'
+]
+---
+<!-- Social -->
+<div class="social">
+    {social.map((icon) => 
+        <span><i class={icon}></i></span>			
+    )}
+</div>
+<style>
+    /* social */
+    .social{
+        display: flex;
+        justify-content: space-around;
+        color: #7498b5;
+    }
+</style>
