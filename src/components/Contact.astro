@@ -1,0 +1,33 @@
+---
+const contact= [
+	{icon: 'bi bi-envelope-fill', text: 'jescordova@hotmail.com'},
+	{icon: 'bi bi-globe', text:'yasta-code.github.io '},
+	{icon: 'bi bi-phone-fill', text:'+32 479 069 836'},
+	{icon: 'bi bi-geo-alt-fill', text: '1070 Bruxelles, BE'},
+    {icon: 'bi bi-check2-circle', text: 'Plan Activa, FPI, PTP'},
+    {icon: 'bi bi-car-front-fill', text:'Permis B'}, 
+    {icon: 'bi bi-flag-fill', text: 'Belge'},
+]
+---
+
+<!-- Contact -->
+<ul class="contact list-group list-group-flush ">
+    {contact.map((item) =>
+        <li class="list-group-item"><i class={item.icon}></i> {item.text}</li>
+    )}
+</ul>
+
+<style>
+    /* Contact */
+    li:first-child{
+        margin-top: 1rem;
+    }
+    li{
+        padding-left: 0;
+        padding-right: 0;
+        background-color: #2B3035;
+    }
+    li .bi{
+        color: #7498b5;
+    }
+</style>
