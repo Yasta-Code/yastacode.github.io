@@ -1,0 +1,29 @@
+---
+const education= [
+    'Full Stack web Développeur',
+    'Graduat en Informatique',
+    'École d\'Evere',
+    '2004 - 2008',
+    'Bruxelles - Belgique'
+]
+---
+
+<!-- Education -->
+<ul class="education">
+    <li class="lead">education</li>
+    {education.map((item) => 
+    <li>{item}</li>
+    )}
+</ul>
+
+<style>
+    ul{
+        list-style: none;
+        padding: 0;
+    }
+    li:first-child{
+        margin-top: 1rem;
+        text-transform: uppercase;
+        color: #7498b5;
+    }
+</style>
