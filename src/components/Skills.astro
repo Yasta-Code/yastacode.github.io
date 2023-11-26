@@ -1,0 +1,44 @@
+---
+const skills= [
+    {title: 'Languages', lang:['HTML','CSS','JavaScript','PHP']},
+    {title: 'Libraries', lang: ['Bootstrap','FlexBox','Json','Yaml','Git']},
+    {title: 'Frameworks', lang: ['Node.js','Express','Astro','Symfony']},
+    // {title: 'Cms', lang: ['Drupal','WordPress']},
+    {title: 'Graphisme', lang: ['Photoshop','Illustrator','Gimp']}
+]
+
+---
+<!-- Slkills -->
+<ul class="skills">
+    <li class="lead">skills</li>
+    {skills.map((skill) => 
+        <li class="subtitle">{skill.title}
+            <ul>
+                {skill.lang.map((item) =>
+                    <li class="fw-normal">{item}</li>
+                )}
+            </ul>
+        </li>
+    )}
+</ul>
+
+<style>
+    ul{
+        list-style: none;
+        padding: 0;
+    }
+    .skills>li:first-child{
+        margin-top: 1rem;
+        text-transform: uppercase;
+        color: #7498b5;
+    }
+    .subtitle{
+        color: #96c8fb;
+    }
+    .subtitle>ul li{
+        color: #fff;
+    }
+    .subtitle>ul li:last-child{
+        margin-bottom: 1rem;
+    }
+</style>
