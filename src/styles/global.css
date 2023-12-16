@@ -1,7 +1,100 @@
 @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
 
+/* body{
+    padding: 1rem;
+} */
+
+/* CONTAINER */
+.site{
+    min-height: 100vh;
+    /* border: 1px solid red; */
+    .row{
+        /* border: 1px solid green; */
+        min-height: 100vh;
+    }
+}
+/* NAVBAR */
+/* HEADER */
+/* MAIN */
+.main{
+    display: flex;
+    justify-content: flex-start;
+}
 /* ASIDE */
 .aside{
+    border: 1px solid #eee;
+    display: none;
+    background-color: #c5d6e4;
+    height: 100%;
+    color: #77838b;
+    position: relative;
+}
+.aside-main{
+    height: 100%;
+    .aside-header{
+        text-align: center;
+        padding: 0rem 1rem;
+        margin-top: 1rem;
+        border-bottom: 2px double #a7b6c2;
+        img{
+            border: 5px solid #a7b6c2;
+            padding: 0.1rem;
+        }
+        .info{
+            padding: 2rem 0;
+            text-transform: uppercase;
+            font-family: 'Julius Sans One', sans-serif;
+            h1{
+                display: flex;
+                flex-direction: column;
+                text-shadow: 1px 1px 2px #fff;
+            }
+            h2{
+                padding-top: 1rem;
+                color: #888;
+            }
+        }
+    }
+    .aside-body{
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        .contact{
+            padding: 0 1rem;
+            list-style: none;
+            padding: 0;
+        }
+    }
+    .aside-footer{
+        .social{
+            background-color: #bbccd9;
+            border-top: 2px double #a7b6c2;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            padding: 0.5rem;
+            position: absolute;
+            bottom: 0px;
+        }
+    }
+}
+@media (min-width: 992px) {
+    .aside{
+        display: block;
+    }
+}
+
+/* SECTION */
+.section{
+    flex-grow: 1;
+}
+/* FOOTER */
+
+
+
+
+
+/* .aside{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -13,4 +106,4 @@
     .aside{
         border-right: none;
     }
-}
+} */
