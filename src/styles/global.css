@@ -1,15 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
 
-/* body{
+body{
     padding: 1rem;
-} */
+}
 
 /* CONTAINER */
 .site{
     min-height: 100vh;
-    /* border: 1px solid red; */
+    padding: 1rem 1rem;
+    box-shadow: 1px 1px 5px #777;
+    border-radius: 0.3rem;
     .row{
-        /* border: 1px solid green; */
         min-height: 100vh;
     }
 }
@@ -87,6 +88,20 @@
 /* SECTION */
 .section{
     flex-grow: 1;
+}
+.section-main{
+    padding: 1rem 3rem 3rem 1rem;
+}
+.section-header{
+    text-align: end;
+    padding: 3rem 0;
+}
+.section-main{
+    text-align: justify;
+}
+.section-footer{
+    text-align: end;
+    padding-top: 3rem;
 }
 /* FOOTER */
 
